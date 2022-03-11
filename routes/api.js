@@ -16,8 +16,9 @@ router.post('/notes', (req, res) => {
 
         fs.writeFile('./db/db.json', JSON.stringify(working), function(error) {
             if (error) return error;
-        })
-    })
+        });
+    });
+    res.end();
 })
 
 module.exports = router;
