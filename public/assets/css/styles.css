@@ -36,11 +36,6 @@ body {
   font-size: 3rem;
 }
 
-.note-title:read-only,
-.note-textarea:read-only {
-  color: #757575;
-}
-
 .list-container .card {
   height: calc(100vh - 70px);
   border-bottom: none;
