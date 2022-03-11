@@ -54,13 +54,15 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
-    console.log(`made it to if statement in renderactive`);
+    console.log(`IF made it to if statement in renderactive`);
+    console.log(activeNote);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
-    console.log(`made it to if statement in renderactive`);
+    console.log(`ELSE made it to if statement in renderactive`);
+    console.log(activeNote);
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
     noteTitle.value = '';
