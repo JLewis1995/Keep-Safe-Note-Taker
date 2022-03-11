@@ -50,8 +50,9 @@ npm test
 For any questions regarding the repo or application, please contact me at jacobllewis@outlook.com. I do have additional projects on display at https://github.com/JLewis1995/.
 
 
-https://afternoon-sands-82562.herokuapp.com/
+https://keep-safe-note-taker.herokuapp.com/
 
 https://github.com/JLewis1995/Note-Taker
 
-
+![Landing](./instructional/images/landing.PNG)
+![Notes](./instructional/images/notes.PNG)
