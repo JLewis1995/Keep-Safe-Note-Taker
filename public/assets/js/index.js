@@ -111,7 +111,7 @@ const handleRenderSaveBtn = () => {
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
   if (window.location.pathname === "/notes") {
-    noteList.forEach((el) => (el.innerHTML = ""));
+    noteList.each((el) => (el.innerHTML = ""));
   }
 
   let noteListItems = [];
@@ -149,7 +149,7 @@ const renderNoteList = async (notes) => {
     noteListItems.push(createLi("No saved Notes", false));
   }
 
-  jsonNotes.forEach((note) => {
+  jsonNotes.each((note) => {
     const li = createLi(note.title);
     li.dataset.note = JSON.stringify(note);
 
@@ -157,7 +157,7 @@ const renderNoteList = async (notes) => {
   });
 
   if (window.location.pathname === "/notes") {
-    noteListItems.forEach((note) => noteList[0].append(note));
+    noteListItems.each((note) => noteList[0].append(note));
   }
 };
 
