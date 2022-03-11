@@ -129,7 +129,7 @@ const renderNoteList = async (notes) => {
     liEl.append(spanEl);
 
     if (delBtn) {
-      const delBtnEl = document.createElement("i");
+      const delBtnEl = ("<i>");
       delBtnEl.addClass(
         "fas",
         "fa-trash-alt",
@@ -149,7 +149,7 @@ const renderNoteList = async (notes) => {
     noteListItems.push(createLi("No saved Notes", false));
   }
 
-  jsonNotes.each((note) => {
+  jsonNotes.forEach((note) => {
     const li = createLi(note.title);
     li.dataset.note = JSON.stringify(note);
 
