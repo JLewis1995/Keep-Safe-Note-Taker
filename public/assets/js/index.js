@@ -74,6 +74,7 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    // created ID and added random number generator with enough digits to prevent repeats
     id: (Math.floor(Math.random() * 100000)),
   };
   saveNote(newNote).then(() => {
