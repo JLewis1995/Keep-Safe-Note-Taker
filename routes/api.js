@@ -24,10 +24,12 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
+    // get id from passed in data
     const tobe = req.params.id;
     fs.readFile('./db/db.json', 'utf-8', (error, data) => {
         if (error) throw error;
         let working = JSON.parse(data);
+        // cycle through list of note ids to see if any match - if so splice
         for (let i = 0; i < working.length; i++) {
             if (tobe == working[i].id) {
                 working.splice(i,1);
