@@ -21,6 +21,6 @@ router.post('/notes', (req, res) => {
         });
     });
     res.end();
-})
+});
 
 module.exports = router;
