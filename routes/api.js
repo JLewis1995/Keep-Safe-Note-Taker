@@ -24,7 +24,7 @@ router.post('/notes', (req, res) => {
     res.end();
 });
 
-router.delete('/notes/', (req, res) => {
+router.delete('/notes', (req, res) => {
     console.log(req);
     const tobe = req;
     fs.readFile('./db/db.json', 'utf-8', (error, data) => {
