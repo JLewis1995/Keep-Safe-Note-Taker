@@ -24,7 +24,7 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/', (req, res) => {
-    const tobe = req.params.id;
+    const tobe = req;
     fs.readFile('./db/db.json', 'utf-8', (error, data) => {
         if (error) throw error;
         let working = JSON.parse(data);
