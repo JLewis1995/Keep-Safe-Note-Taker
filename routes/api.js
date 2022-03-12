@@ -23,4 +23,22 @@ router.post('/notes', (req, res) => {
     res.end();
 });
 
+router.delete('/notes/', (req, res) => {
+    const tobe = req.params.id;
+    fs.readFile('./db/db.json', 'utf-8', (error, data) => {
+        if (error) throw error;
+        let working = JSON.parse(data);
+        for (let i = 0; i < working.length; i++) {
+            if (tobe == working[i].id) {
+                working.splice(i,1);
+                fs.writeFile('./db/db.json', JSON.stringify(working), (error) => {
+                    if (error) throw error;
+                });
+            };
+            
+        };
+    });
+    res.end();
+});
+
 module.exports = router;
