@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { log } = require('console');
 const fs = require('fs');
 
 // respond with JSON data from db.json when /notes api is called with GET
@@ -24,6 +25,7 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/', (req, res) => {
+    console.log(req);
     const tobe = req;
     fs.readFile('./db/db.json', 'utf-8', (error, data) => {
         if (error) throw error;
