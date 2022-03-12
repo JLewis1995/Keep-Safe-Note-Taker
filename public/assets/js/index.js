@@ -53,6 +53,7 @@ const deleteNote = (id) =>
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
+  // removed readonly attribute - notes should have edit feature
   if (activeNote.id) {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
